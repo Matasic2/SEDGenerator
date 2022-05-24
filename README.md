@@ -1,26 +1,15 @@
-This is a fork of [this repo](https://github.com/maria-vincenzi/PyCoCo_templates) by [Vincenzi et al. (2019)](https://arxiv.org/abs/1908.05228), with some minor changes.
+Original code available [here](https://github.com/maria-vincenzi/PyCoCo_templates).
 
-This code is used in [Bengyat & Gal-Yam (2022)](https://arxiv.org/abs/2202.10300).
-
-### Prerequisites
-- Python 3 with basic packages
-- The Package [george](https://george.readthedocs.io/en/latest/) (version 0.3.1 at least)
-
-### Build your own template: Instructions
-1. Set the variables `COCO_PATH` and `SN_NAME` in `config.py`.
-1. Automated: Run the function `get_spectroscopy` (uses spectra folder downloaded from [WISeREP](https://wiserep.org/) incl. the csv file) in `run.py`. Or (see example files for formats):
-   1. Place a file with the list of the spectra `./Inputs/Spectroscopy/1_spec_lists_original`. Place the actual files with the spectra in `./Inputs/Spectroscopy/1_spec_original`. If you want to smooth the spectra use the provided code. Otherwise, skip this and put list and spectra in the folders `./Inputs/Spectroscopy/2_spec_lists_smoothed` and `./Inputs/Spectroscopy/2_spec_smoothed`.
-   1. Modify `./Inputs/SNe_info/info.dat` and add a row for each new template you want to build.
-1. Run the function `get_photometry` (downloads photometry from the [OSC](https://sne.space/)) in `run.py`. You will be prompted to input the names (without .dat) of the transmission function files (see next step) corresponding to every photometry entry form OSC. Or (see example files for formats):      
-   1. Place your photometry in magnitudes in `./Inputs/Photometry/0_LCs_mags_raw`. If your photometry is already in flux or is already dust corrected (or you don’t want to dust correct it) and/or is already extended at early/late time (or you don’t want to extend it at early/late times) just skip all these steps, do not run the first 4 scripts and place the photometry directly in `./Inputs/Photometry/4_LCs_late_extrapolated`.
-1. Put the transmission function files with the name of the band + .dat in `./Inputs/Photometry/filterdict.json`.
-1. Write which filters from the photometry file you wish to not use in `./Outputs/SN_NAME/exclude_filt`.
-1. Write the names of 4 filters corresponding to V, V, B, B filters in `./Outputs/SN_NAME/VVBB` (for initial strech purposes).
-1. Finish filling the line corresponding to the SN in `./Inputs/SNe_info/info.dat`.
-1. Run the scripts by order by running the function `runpycoco` in `run.py`.
-
-All the outputs (LC fit, mangled spectra, various plots and final template) will be created in `./Outputs`.
-
-Figure 1 in [Vincenzi et al. (2019)](https://arxiv.org/abs/1908.05228) shows a flow chart of the process where each step of the process corresponds to a script in `./Codes_Scripts`. This fork uses .py scripts instead of .ipynb notebooks.
-
-![Imgur](pycoco_code_structure.png)
+### Instructions for generating new templates:
+1. Change `COCO_PATH` in `Codes_Scripts/config.py`. (only do this once)
+1. Add SN peak date into `peak_dicts` in `Codes_Scripts/a9_Final_Template_SNANAformat.py`.
+1. Add `SN_name` in `run.py`
+1. Add photometric data into `Inputs/Photometry/0_LCs_mags_raw`. If you are using data from YSE_DR1, you can use `InputGenerator/generate_phot_data.py` to format photometric data.
+1. Add SN info into `Inputs/SNe_Info/info.dat`
+1. Add Spectroscopic data: 
+	1. Add spectroscopy data into `Inputs/Spectroscopy/1_spec_original/(SNNAME)`. You will probably need to create (SNNAME) folder. 
+	1. Add a list of spectroscopic data into `Inputs/Spectroscopy/1_spec_lists_original/(SNNAME).list`. You will probably need to create (SNNAME).list file. Columns in the list file are: directory, SN name, observation MJD, redshift (see other .list files for clarification). The first entry in this list must be repeated and entries must be ordered by their observation MJD. Script `Inputs/Spectroscopy/1_spec_original/SN2019yvr/printList.py` could be helpful with generating the .list file.
+	1. Check spectroscopic data for negative values and right units. Spectra needs to be non-normalized, calibrated F_lambda spectra in units of erg s⁻¹ cm⁻² Å⁻¹. Usually good y values are between e-15 and e-18. Larger values and negative values are usually indicator of different units (if there are only a few negative values, spectra might still be usable if rows with negative values are deleted). Smoothing can also be applied with `Inputs/Spectroscopy/1_spec_original/SN2019yvr/proc.py`.
+1. Add folder in `Outputs` for new SN. Copy `exclude_filt` and `VVBB` from other SN folders in outputs 2019 or later.
+1. Use `run.py` to run PyCoCo. Do not use `run.py` in Codes_Scripts folder.
+1. Your template should appear in `Templates_HostCorrected` folder. You can use `plotSEDs.ipynb` in `sedCompare` folder to plot your new SED. Use `filterSEDfile` function to filter any NaNs that might exist. 

@@ -12,7 +12,6 @@ import sys
 def main(SN_NAME_):
 
     pycoco_path = ".//Outputs//"
-    COCO_PATH
     
     using_hostNOTcorrected = False
     peak_dicts = {}

@@ -217,7 +217,6 @@ def get_spectroscopy(SN_NAME_, SN_SPECDIR_):
 
 
 def runpycoco(SN_NAME_):
-    """
     Codes_Scripts.a0_1_Smooth_spectra.main(SN_NAME_)
     print("a0_1 done")
     Codes_Scripts.a0_toFlux.main(SN_NAME_)
@@ -236,7 +235,6 @@ def runpycoco(SN_NAME_):
     print("a6 done")
     Codes_Scripts.a7_Rimangle.main(SN_NAME_)
     print("a7 done")
-    """
     Codes_Scripts.a9_Final_Template_SNANAformat.main(SN_NAME_)
     #plt.show()
 
