@@ -7,7 +7,7 @@ import pandas as pd
 
 import what_the_flux.what_the_flux as wtf  # noqa: F401 unused import
 
-COCO_PATH = "C:/Users/Filip/Desktop/ASTRprojekt/template2"  # chnage to source directory of this code
+COCO_PATH = "C:/Users/Filip/Desktop/ASTRprojekt/template2"  # change to source directory of this code
 SPEC_PATH = join(environ['HOME'], 'DropboxWIS/my_spectra_collections')
 
 SCRIPTS_PATH = join(COCO_PATH, 'Codes_Scripts')
