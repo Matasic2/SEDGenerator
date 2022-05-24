@@ -1,0 +1,14 @@
+DOCUMENTATION:
+  GENVERSION: PALEO_YSE_ZTF_MODEL38 
+
+#                   NLC_GEN   NLC_WRITE  NSPEC_WRITE  CPU(minutes)
+  STAT_SUMMARY: 
+  - TOTAL            100000      22829         0        44.9
+  - NONIaMODEL0      100000      22829         0        44.9
+
+  INPUT_FILES:
+  - MASTER    REFAC_SIMGEN_MASTER_YSE_ZTF.INPUT 
+  - NONIa     /global/cfs/cdirs/lsst/groups/TD/SN/SNANA/SURVEYS/LSST/USERS/paleo/YSEtests/SIMGEN_TEMPLATE_YSE_ZTF_FINAL.INPUT 
+
+  SUBMIT_DIR:  /global/cfs/cdirs/desc-sn/SNANA/SURVEYS/LSST/USERS/paleo/YSEtests
+DOCUMENTATION_END:

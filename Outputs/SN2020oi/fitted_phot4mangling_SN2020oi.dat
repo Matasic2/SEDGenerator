@@ -1,0 +1,12 @@
+spec_file	spec_mjd	ZTF_g_fitflux	ZTF_g_fitfluxerr	ZTF_g_inrange	ZTF_r_fitflux	ZTF_r_fitfluxerr	ZTF_r_inrange
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58857.304.txt	58857.3	3.629043720756383e-15	1.7515553193435945e-16	True	2.3300386356507386e-15	2.3290787754244595e-16	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58860.547.txt	58860.55	1.0731132823288659e-14	1.2526532020638085e-16	True	6.397658359603012e-15	2.0278832586474634e-16	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58864.58.txt	58864.58	1.69597958518691e-14	3.6746518188097416e-16	True	1.0195359850006634e-14	1.7662565833028918e-16	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58868.638.txt	58868.64	1.1109504781275844e-14	3.919081862411995e-16	True	9.80375262763434e-15	1.3275345179588635e-16	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58870.516.txt	58870.52	7.954421062966017e-15	2.421739520187221e-16	True	8.377874477530576e-15	9.501175832038886e-17	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58872.439.txt	58872.44	5.815853732396128e-15	1.344175436916935e-16	True	6.942066717297018e-15	5.3956502702776e-17	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58875.0.txt	58875.0	4.032712928956446e-15	1.8972691125290453e-16	True	5.208319973330698e-15	5.437222016609628e-17	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58879.421.txt	58879.42	2.4951004456343027e-15	1.293540759342965e-16	True	3.0206408724435913e-15	1.7927865289143867e-17	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58880.326.txt	58880.33	2.37821926791752e-15	3.116546043959392e-17	True	2.8206200462232504e-15	4.0499575905652374e-17	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58892.0.txt	58892.0	1.4040836896410997e-15	9.022442362153654e-17	True	1.3254578982088529e-15	3.267510879516861e-17	True
+C:/Users/Filip/Desktop/ASTRprojekt/template2\Inputs/Spectroscopy\2_spec_smoothed/SN2020oi/58895.0.txt	58895.0	1.3707607048268745e-15	6.893757550788663e-17	True	1.2457554196042407e-15	3.1349455087646754e-17	True
